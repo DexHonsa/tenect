@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Tengage</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/viewer.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/product.css">
+  
+   
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div class="top-nav">
+		<a href="home.html"><div class="main-logo"><img src="img/logo_white.png" alt=""></div></a>
+		<div class="container" style="display: flex; align-items: center; padding:0;">
+		<div class="main-nav-list">
+			<ul>
+				<a href="tenant-utility.html"><li>Tenant Utility</li></a>
+				<a href="social-connections.html"><li>Social Connections</li></a>
+				<li class="active">Marketplace</li>
+			</ul>
+		</div>
+		<div class="main-search-bar">
+			<input type="text" placeholder="Search..">
+		</div>
+		<div class="user-nav-options">
+			<ul>
+				<li><i class="fa fa-bars"></i></li>
+				<li><i class="fa fa-user"></i></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<div class="main-stage">
+	<div class="container" style="display: flex; align-items: center; padding:0; position: relative;">
+		<div class="left-side-panel" >
+			<div class="left-side-nav fixed">
+				<ul>
+					<li>Do You Know Somebody Who?
+						<div class="left-sub-nav">
+							<ul>
+								<a href="marketplace.html"><li>Products</li></a>
+								<li>Places</li>
+								<li>Jobs</li>
+							</ul>
+						</div>
+					</li>
+					<li class="active">Food Or Grocery Delivery</li>
+					<a href="bucketlist.html"><li>Bucket-list Travel Destinations</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="middle-panel-big">
+			
+			<div class="title-1 center">Food Or Grocery Delivery
+			</div>
+			<div class="main-tab-container" style="padding:0px 275px;">
+				
+			</div>
+			<div class="food-container">
+			<div class="title-1">Restaurant</div>
+			<div class="food-subtitle">These Restaurants Deliver To Your Building. Click For Menu And Phone Number.</div>
+			<div class="row">
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/islands.png" alt=""></div>
+				</div>
+			</div>
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/dominos.png" alt=""></div>
+				</div>
+			</div>
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/Vons_logo.svg.png" alt=""></div>
+				</div>
+			</div>
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/panda.png" alt=""></div>
+				</div>
+			</div>
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/panera.png" alt=""></div>
+				</div>
+			</div>
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/chipotle.png" alt=""></div>
+				</div>
+			</div>
+			</div>
+			<!--Grocery -->
+			<div class="title-1">Grocery</div>
+			<div class="food-subtitle">These Restaurants Deliver To Your Building. Click For Menu And Phone Number.</div>
+			<div class="row">
+			<div class="food-item col-sm-4">
+				<div class="food-item-inner">
+					<div class="food-item-logo"><img src="img/Vons_logo.svg.png" alt=""></div>
+				</div>
+			</div>
+			</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	</div>
+
+
+   
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/viewer.js"></script>
+    
+    <script>
+		new WOW().init();
+	$(document).ready(function(){
+		$('.tv-site-widget').css('background', 'transparent !important');
+		console.log('done');
+		
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+
+		var yyyy = today.getFullYear();
+		if(dd<10){
+			dd='0'+dd;
+		} 
+		if(mm<10){
+			mm='0'+mm;
+		} 
+		var today = mm+'/'+dd+'/'+yyyy;
+		$('#todays-date').html(today);
+		document.getElementById("DATE").value = today;
+	})
+	setTimeout(function(){
+		$('.preloader').fadeOut();
+	},700);
+		$('.notification-dismiss').click(function(){
+			$(this).parent('.notification-item').fadeOut();
+		})
+	
+		
+		
+	</script>
+
+
+</body>
+
+</html>

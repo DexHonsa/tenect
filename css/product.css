@@ -83,6 +83,43 @@ ul, li{
 .main-search-bar{
 	float: left;
 	margin-left: 150px;
+	position: relative;
+	
+}
+.main-search-bar-dropdown{
+	position: absolute;
+	background:#fff;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+	top:53px;
+	opacity: 0;
+	pointer-events: none;
+}
+.main-search-bar-dropdown li{
+	white-space: nowrap;
+	
+}
+.main-search-item{
+	display: flex;
+	
+	align-items: center;
+	padding:15px 170px 15px 15px;
+	
+}
+.main-search-item:hover{
+	background:#f8f8f8;
+	cursor: pointer;
+}
+.main-search-bar-dropdown.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+.main-search-img{
+	height:40px;
+	width:40px;
+	background-image:url(../img/134.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-right: 15px;
 }
 .main-search-bar input{
 	color:#87adba !important;
@@ -120,6 +157,7 @@ input:focus{
 	padding:15px;
 	cursor: pointer;
 	transition:all .3s ease;
+	position: relative;
 }
 .user-nav-options li:hover{
 	color:#fff;
@@ -279,13 +317,16 @@ input:focus{
 	color:#34b2b8;
 }
 .article-item{
+	
+}
+.article-item-top{
 	min-height: 250px;
 	background-image: url(../img/it.jpg);
 	background-size: cover;
 	background-position: center center;
 	position: relative;
 	font-weight: 500;
-	margin-bottom:15px;
+	
 }
 .article-item:hover .article-item-details{
 	height:90px;
@@ -302,6 +343,12 @@ input:focus{
 	color:#fff;
 	transition: all .3s ease;
 	cursor: pointer;
+}
+.article-item-description{
+	background:#fff;
+	font-size: 10pt;
+	padding:15px;
+	margin-bottom:15px;
 }
 .article-item-title{
 	font-size: 16pt;
@@ -1054,8 +1101,285 @@ input:focus{
 	display: inline-block;
 }
 
-@media(max-width:1400px){
+@media(max-width:1500px){
 	.top-nav ul{
 		padding-left:100px;
 	}
+}
+.graph-container{
+	display: flex;
+	align-items: center;
+	margin-bottom:25px;
+	overflow: autol
+}
+.graph-item{
+	flex:1;
+	height:200px;
+	position: relative;
+	padding:15px;
+}
+.graph-title{
+	font-size: 12pt;
+	font-weight: 500;
+	margin-bottom:25px;	
+	color:#1b485d;
+}
+.graph-title span{
+	color:#34b2b8;
+	float: right;
+}
+.most-popular-list ul li{
+	width:100%;
+	border-bottom:solid 1px #eaeaea;
+	padding:5px 10px;
+}
+.most-popular-list ul li span{
+	float: right;
+	text-align: right;
+}
+.most-popular-title{
+	width:100%;
+	border-bottom:solid 1px #eaeaea;
+	padding:10px;
+	font-weight: 500;
+}
+.most-popular-title span{
+	float: right;
+}
+.property-img{
+	background-image: url(../img/park2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:300px;
+	background-position: center;
+}
+.management-user-container{
+	display: flex;
+	align-items: center;
+}
+.management-user-img{
+	height:100px;
+	width:100px;
+	background-image: url(../img/1200px-Wells_Fargo_Bank.svg.png);
+	background-size: cover;
+	background-position: center;
+	margin-right:15px;
+}
+.management-user-title{
+	font-size: 13pt;
+	font-weight: 600;
+	line-height: 15pt;
+}
+.management-user-title span{
+	font-size: 10pt;
+	color:#d0d0d0;
+}
+.management-user-details{
+	margin-left: auto;
+	text-align: right;
+}
+.management-user-details span{
+	font-size: 14pt;
+	color:#34b2b8;
+}
+.management-user-activated{
+	color:#d0d0d0;
+}
+.management-user-activated.active{
+	color:#34b2b8;
+}
+.management-user-item{
+	display: flex;
+	align-items: center;
+	border-bottom:solid 1px #eaeaea;
+	padding:10px;
+}
+.management-employee-img{
+	height:40px;
+	width:40px;
+	background-image: url(../img/blank_user.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 50px;
+	position: relative;
+	margin-right:15px;
+}
+.management-user-activated{
+	margin-left: auto;
+}
+.management-employee-check{
+	background:#34b2b8;
+	color:#fff;
+	height:15px;
+	width:15px;
+	border-radius: 15px;
+	position: absolute;
+	right:-5px;
+	top:-2px;
+	font-size: 7pt;
+	text-align: center;
+}
+.emergency-tile-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.emergency-tile-item:hover .emergency-tile-item-inner{
+	transform:scale(1.05, 1.05);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+	cursor: pointer;
+}
+.emergency-tile-item{
+	width:33.333333%;
+}
+.emergency-tile-item-inner{
+	transition:all .3s ease;
+	margin:10px;
+	background:#f8f8f8;
+	padding:15px;
+	text-align: center;
+	color:#d06666;
+}
+.emergency-tile-icon img{
+	max-width: 120px;
+}
+.sub-dropdown{
+	position: absolute;
+	background:#fff;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+	
+	left:-170%;
+	top:90px;
+	transform: translateY(0);
+	opacity:0;
+	pointer-events: none;
+	transition: all .3s ease;
+}
+.sub-dropdown.active{
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(-20px);
+}
+ul{
+	margin:0;
+	padding:0;
+}
+.sub-dropdown ul{
+	padding:0;
+	padding:0px;
+	
+}
+.sub-dropdown li{
+	white-space: nowrap;
+	width:100%;
+	color: #87adba;
+    font-size: 10pt;
+    float: none;
+    padding: 10px 40px 10px 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+	
+}
+.sub-dropdown li:hover{
+	background:#f8f8f8;
+	color:#000;
+}
+.sub-divider{
+	padding:0px !important;
+	height:1px;
+	background:#eaeaea;
+	
+}
+.login-top-bar{
+	height:80px;
+	background:#1b485d;
+	width:100%;
+	display: flex;
+	align-items: center;
+	
+}
+.top-logo img{
+	height:80px;
+	padding:20px;
+	float: left;
+}
+.sign-up-btn{
+	background:#34b2b8;
+	padding:5px 14px;
+	color:#fff;
+	border-radius: 3px;
+	display: inline-block;
+	float: right;
+	margin-left: auto;
+	transition:all .3s ease;
+	margin-right: 25px;
+}
+.sign-up-btn:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 0px 5px rgba(52,178,184,0.39);
+}
+.login-main{
+	height:100vh;
+	max-height: 700px;
+	background:#f8f8f8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-box{
+	width:250px;
+	text-align: center;
+}
+.login-box-logo img{
+	max-width: 250px;
+	margin-bottom:15px;
+}
+.login-box-input-item{
+	text-align: left;
+	margin-bottom:10px;
+}
+.login-box-input-item input{
+	border:solid 1px #eaeaea;
+	border-radius: 3px;
+	width:100%;
+	padding:7px;
+	font-weight: 500;
+	color:#808080;
+}
+.login-box-input-item input:focus{
+	border-color:#34b2b8;
+}
+.login-box-input-item label{
+	text-transform: uppercase;
+	color:#808080;
+	font-size: 9pt;
+	width:100%;
+	margin:0;
+}
+.login-box-btn{
+	background:#34b2b8;
+	padding:5px 24px;
+	width:100%;
+	color:#fff;
+	border-radius: 3px;
+	display: inline-block;
+	float: right;
+	margin-left: auto;
+	transition:all .3s ease;
+	margin-top:15px;
+}
+.login-box-btn:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 0px 5px rgba(52,178,184,0.39);
+}
+.disclaimer-text{
+	font-size: 9pt;
+	margin-top: 20px;
+	display: inline-block;
+	color:#808080;
+}
+.disclaimer-text a{
+	text-decoration: underline;
+	color:#34b2b8;
 }

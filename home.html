@@ -8,23 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	
-    <title>Tengage</title>
+
+    <title>Tenect</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	
+
    <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/viewer.css">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/product.css">
-  
-   
+
+
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-	
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,12 +47,38 @@
 			</ul>
 		</div>
 		<div class="main-search-bar">
-			<input type="text" placeholder="Search..">
+			<input id="main-search-bar" type="text" placeholder="Search..">
+			<div class="main-search-bar-dropdown">
+				<ul>
+					<li>
+						<div class="main-search-item">
+							<div class="main-search-img"></div>
+							<div class="main-search-title">David Blaine</div>
+						</div>
+					</li>
+					<li>
+						<div class="main-search-item">
+							<div class="main-search-img" style="background-image:url(img/137.jpg)"></div>
+							<div class="main-search-title">Deena Grey</div>
+						</div>
+					</li>
+					<li><div class="main-search-item">See More Results</div></li>
+				</ul>
+			</div>
 		</div>
 		<div class="user-nav-options">
 			<ul>
-				<li><i class="fa fa-bars"></i></li>
-				<li><i class="fa fa-user"></i></li>
+			  <li><em class="fa fa-bars"></em> </li>
+			  <li><i class="fa fa-user"></i>
+					<div class="sub-dropdown">
+						<ul>
+							<a href="management-console.html"><li>Management Console</li></a>
+							<a href="social-connections.html"><li>My Profile</li></a>
+							<li class="sub-divider"></li>
+							<a href="index.html"><li>Sign Out</li></a>
+						</ul>
+					</div>
+				</li>
 			</ul>
 		</div>
 		</div>
@@ -63,7 +89,7 @@
 			<div class="manager-container">
 				<div class="manager-img"></div>
 				<div class="manager-name">Ashley Rhodes<br><div class="manager-subtitle">Property Manager</div></div>
-				<div class="manager-email-btn"><i class="fa fa-envelope"></i>&nbsp; Email</div>
+				<a href="mailTo:ashley@gmail.com"><div class="manager-email-btn"><i class="fa fa-envelope"></i>&nbsp; Email</div></a>
 			</div>
 			<div class="stockmarket-widget">
 				<div class="title-1">Stock Market</div>
@@ -208,36 +234,93 @@
 			<div class="overlay">
 				<div class="main-property-title">1 Tech Plaza</div>
 				<div class="date-details">
-					
+
 						<li id="todays-date">Oct 25, 2017</li>
 						<li>2:14 PM</li>
 						<li>73°F</li>
-					
+
 				</div>
 				</div>
 			</div>
 			<div class="title-1 center">Office Talk</div>
 			<div class="main-tab-container">
-				<li class="active">Top Movies</li>
-				<li>Top Sports</li>
-				<li>Top Celebrity Gossip</li>
+				<li id="movies" class="active">Top Movies</li>
+				<li id="sports">Top Sports</li>
+				<li id="celebs">Top Celebrity Gossip</li>
 			</div>
+			<div id="movie-articles" class="article-container">
 			<div class="article-item">
+			<div class="article-item-top">
 				<div class="article-item-details">
-					<div class="article-item-title">IT: Clowns Are Scary
+					<div class="article-item-title">Star Wars Is Back
 						<div class="article-item-date">October 19, 2017</div>
 					</div>
 					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
 				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
 			</div>
-			<div class="article-item" style="background-image: url(img/park.jpg)">
+			<div class="article-item" >
+			<div class="article-item-top" style="background-image: url(img/park.jpg)">
 				<div class="article-item-details">
-					<div class="article-item-title">IT: Clowns Are Scary
+					<div class="article-item-title">Jobs Are in Season
+						<div class="article-item-date">January 05, 2018</div>
+					</div>
+					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
+				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
+			</div>
+			</div>
+			<div id="sports-articles" style="display: none" class="article-container">
+			<div class="article-item">
+			<div class="article-item-top" style="background-image: url(img/Baker%20Mayfield%20Action%20Photo.jpg)">
+				<div class="article-item-details">
+					<div class="article-item-title">Will He Win it All?
+						<div class="article-item-date">Dec 19, 2017</div>
+					</div>
+					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
+				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
+			</div>
+			<div class="article-item" >
+			<div class="article-item-top" style="background-image: url(img/Sixers%20blow%2018%20point%20lead%20photo.jpg)">
+				<div class="article-item-details">
+					<div class="article-item-title">Sixers Blow 18 Point Lead
+						<div class="article-item-date">Dec 05, 2018</div>
+					</div>
+					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
+				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
+			</div>
+			</div>
+			<div id="celebs-articles" style="display: none;" class="article-container">
+			<div class="article-item">
+			<div class="article-item-top" style="background-image: url(img/Oscars%20Academy%20Award%20Photo.jpg)">
+				<div class="article-item-details">
+					<div class="article-item-title">90th Oscars: March 4th!
 						<div class="article-item-date">October 19, 2017</div>
 					</div>
 					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
 				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
 			</div>
+			<div class="article-item" >
+			<div class="article-item-top" style="background-image: url(img/Harvey%20Weinstein%20image.jpg)">
+				<div class="article-item-details">
+					<div class="article-item-title">Harvey Weinstein: Is He Done?
+						<div class="article-item-date">January 05, 2018</div>
+					</div>
+					<div class="article-item-views">18 <i class="fa fa-users"></i></div>
+				</div>
+				</div>
+				<div class="article-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex quae cumque quidem totam! Laboriosam dolor culpa eius architecto, aut quis. Hic, minima molestiae deserunt tenetur iure nesciunt maxime excepturi.</div>
+			</div>
+			</div>
+			<div style="height:300px;"></div>
 		</div>
 		<div class="right-side-panel animated-slow fadeInDown wow" data-wow-delay=".6s">
 		<div class="notifications">
@@ -268,8 +351,8 @@
 	</div>
 
 
-   
-	
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -277,13 +360,42 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/viewer.js"></script>
-    
+
     <script>
+		$('.main-tab-container li').click(function(){
+			$('.main-tab-container li').removeClass('active');
+			$(this).addClass('active');
+			var id = $(this).attr('id');
+			if(id == 'movies'){
+				$('#movie-articles').show();
+				$('#sports-articles').hide();
+				$('#celebs-articles').hide();
+			}
+			if(id == 'sports'){
+				$('#movie-articles').hide();
+				$('#sports-articles').show();
+				$('#celebs-articles').hide();
+			}
+			if(id == 'celebs'){
+				$('#movie-articles').hide();
+				$('#sports-articles').hide();
+				$('#celebs-articles').show();
+			}
+		})
+		$('#main-search-bar').on('keyup',function(){
+			var query = $(this).val();
+			if(query == ''){
+				$('.main-search-bar-dropdown').removeClass('active');
+			}else{
+				$('.main-search-bar-dropdown').addClass('active');
+			}
+
+		})
 		new WOW().init();
 	$(document).ready(function(){
 		$('.tv-site-widget').css('background', 'transparent !important');
 		console.log('done');
-		
+
 		var today = new Date();
 		var dd = today.getDate();
 		var mm = today.getMonth()+1; //January is 0!
@@ -291,10 +403,10 @@
 		var yyyy = today.getFullYear();
 		if(dd<10){
 			dd='0'+dd;
-		} 
+		}
 		if(mm<10){
 			mm='0'+mm;
-		} 
+		}
 		var today = mm+'/'+dd+'/'+yyyy;
 		$('#todays-date').html(today);
 		document.getElementById("DATE").value = today;
@@ -305,9 +417,17 @@
 		$('.notification-dismiss').click(function(){
 			$(this).parent('.notification-item').fadeOut();
 		})
-	
-		
-		
+
+	$('.user-nav-options li').click(function(){
+		if($(this).children('.sub-dropdown').hasClass('active')){
+			$(this).children('.sub-dropdown').removeClass('active');
+		}else{
+			$(this).children('.sub-dropdown').addClass('active');
+		}
+
+	})
+
+
 	</script>
 
 

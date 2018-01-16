@@ -41,7 +41,7 @@
 		<div class="container" style="display: flex; align-items: center; padding:0;">
 		<div class="main-nav-list">
 			<ul>
-				<li class="active">Tenant Utility</li>
+				<a href="tenant-utility.html"><li>Tenant Utility</li></a>
 				<a href="social-connections.html"><li>Social Connections</li></a>
 				<a href="marketplace.html"><li>Marketplace</li></a>
 			</ul>
@@ -62,13 +62,14 @@
 		<div class="left-side-panel" >
 			<div class="left-side-nav fixed">
 				<ul>
-					<a href="tenant-utility.html"><li>Event Calendar</li></a>
-					<a href="rent-payment.html"><li>Rent Payment</li></a>
-					<a href="maintenance.html"><li class="active">Service and Maintenance Requests</li></a>
-					<a href="emergency.html"><li>Emergency Response</li></a>
-					<a href="coi.html"><li>Certificate of Insurance</li></a>
-					<a href="reservations.html"><li>Reservations</li></a>
-					<a href="surveys.html"><li>Surveys</li></a>
+					<a href="management-console-users.html"><li>Users</li></a>
+					<a href="management-console-add-content.html"><li>Add Content</li></a>
+					<a href="management-console-amenities.html"><li>Amenities</li></a>
+					<a href="management-console-cois.html"><li>COI's</li></a>
+					<a href="management-console-lease-abstracts.html"><li>Lease Abstracts</li></a>
+					<a href="management-console-maintenance.html"><li class="active">Maintenance Requests</li></a>
+					<li class="divider" style="margin:10px 0px; border-color:#C5C5C5;"></li>
+					<a href="management-console-emergency.html"><li style="color:#C98383;">Emergency Notifications</li></a>
 				</ul>
 			</div>
 		</div>
@@ -124,8 +125,213 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/viewer.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
     <script>
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ["JU:Y", "AUG", "SEPT", "OCT","NOV"],
+				datasets: [{
+					data: [2000, 2500, 3000, 3400, 4000],
+					borderColor: '#34b2b8',
+					backgroundColor:'transparent',
+					pointRadius:6,
+					pointBackgroundColor:'#34b2b8',
+					pointBorderColor:'#fff',
+					pointBorderWidth:2,
+					pointHoverBorderWidth:2,
+					pointHoverBorderColor:'#fff',
+					pointHoverRadius:8,
+					lineTension:0,
+					pointHitRadius:10
+				}],
+				
+			},
+
+			options: {
+				responsive:true,
+				legend: { display: false, position: 'bottom' },
+				 scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						},
+						
+					}],
+					 xAxes: [{
+					ticks: {
+						fontSize: 10
+					},
+						 gridLines : {
+							display : false
+						}
+        }]
+				}
+
+				
+
+
+			}
+		});
+		
+		//line 2
+		var ctx2 = document.getElementById("myChart2");
+		var myChart2 = new Chart(ctx2, {
+			type: 'line',
+			data: {
+				labels: ["JU:Y", "AUG", "SEPT", "OCT","NOV"],
+				datasets: [{
+					data: [2000, 2500, 3000, 3400, 4000],
+					borderColor: '#34b2b8',
+					backgroundColor:'transparent',
+					pointRadius:6,
+					pointBackgroundColor:'#34b2b8',
+					pointBorderColor:'#fff',
+					pointBorderWidth:2,
+					pointHoverBorderWidth:2,
+					pointHoverBorderColor:'#fff',
+					pointHoverRadius:8,
+					lineTension:0,
+					pointHitRadius:10
+				}],
+				
+			},
+
+			options: {
+				responsive:true,
+				legend: { display: false, position: 'bottom' },
+				 scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						},
+						
+					}],
+					 xAxes: [{
+					ticks: {
+						fontSize: 10
+					},
+						 gridLines : {
+							display : false
+						}
+        }]
+				}
+
+				
+
+
+			}
+		});
+		//line 3
+		var ctx3 = document.getElementById("myChart3");
+		var myChart3 = new Chart(ctx3, {
+			type: 'line',
+			data: {
+				labels: ["JU:Y", "AUG", "SEPT", "OCT","NOV"],
+				datasets: [{
+					data: [2000, 2500, 3000, 3400, 4000],
+					borderColor: '#34b2b8',
+					backgroundColor:'transparent',
+					pointRadius:6,
+					pointBackgroundColor:'#34b2b8',
+					pointBorderColor:'#fff',
+					pointBorderWidth:2,
+					pointHoverBorderWidth:2,
+					pointHoverBorderColor:'#fff',
+					pointHoverRadius:8,
+					lineTension:0,
+					pointHitRadius:10
+				}],
+				
+			},
+
+			options: {
+				responsive:true,
+				legend: { display: false, position: 'bottom' },
+				 scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						},
+						
+					}],
+					 xAxes: [{
+					ticks: {
+						fontSize: 10
+					},
+						 gridLines : {
+							display : false
+						}
+        }]
+				}
+
+				
+
+
+			}
+		});
+		//Bar 4
+		var ctx4 = document.getElementById("myChart4");
+		var myChart4 = new Chart(ctx4, {
+			type: 'bar',
+			data: {
+				labels: ["JU:Y", "AUG", "SEPT", "OCT","NOV"],
+				datasets: [{
+					label:'Blah',
+					data: [2000, 2500, 3000, 3400, 4000],
+					borderColor: '#34b2b8',
+					backgroundColor:'#34b2b8',
+					
+				},
+						   {
+							   label:'blah2',
+					data: [500, 500, 600, 400, 600],
+					borderColor: '#34b2b8',
+					backgroundColor:'#24989E',
+					
+				}
+						  ],
+				
+			},
+			
+			options: {
+				
+				responsive:true,
+				legend: { display: false, position: 'bottom' },
+				 scales: {
+					 
+					yAxes: [{
+						stacked:true,
+						ticks: {
+							beginAtZero: true,
+							
+						},
+						
+					}],
+					 xAxes: [{
+						 stacked: true,
+						 barPercentage:.7,
+					ticks: {
+						fontSize: 10,
+						
+					},
+						 gridLines : {
+							display : false,
+							 
+						}
+        }]
+				}
+
+				
+
+
+			}
+		});
+		
+		
+		
+		
 		new WOW().init();
 	$(document).ready(function(){
 		$('.tv-site-widget').css('background', 'transparent !important');
